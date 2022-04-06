@@ -3,7 +3,7 @@
     <div class="container-fluid bg-black">
       <div class="container py-4">
         <div>
-          <h2 class="py-4">
+          <h2 class="py-4 c-white">
             --
             <img src="../assets/img/angle-right-solid.svg" alt="right" />
             Content goes here
@@ -71,9 +71,6 @@ export default {
 </script>
 
 <style scoped>
-h2 {
-  color: white;
-}
 h2 img {
   width: 15px;
 }
@@ -82,7 +79,6 @@ h2 img {
   background-color: hsl(209deg 98% 49%);
 }
 li {
-  padding: 0px 10px;
   color: white;
 }
 .sizeImg {

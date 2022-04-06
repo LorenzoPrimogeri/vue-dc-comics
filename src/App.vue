@@ -37,4 +37,10 @@ li {
 .c-grey {
   color: grey;
 }
+.c-white {
+  color: white !important;
+}
+a {
+  text-decoration: none !important;
+}
 </style>

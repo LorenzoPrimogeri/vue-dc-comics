@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import socialMediaData from "../assets/img/socialMediaData";
+import socialMediaData from "../assets/data/socialMediaData";
 export default {
   name: "FooterComponent",
   props: ["links".toLowerCase()],

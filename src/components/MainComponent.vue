@@ -1,18 +1,5 @@
 <template>
   <div>
-    <div class="container-fluid bg-black">
-      <div class="container py-4">
-        <div>
-          <h2 class="py-4 c-white">
-            --
-            <img src="../assets/img/angle-right-solid.svg" alt="right" />
-            Content goes here
-            <img src="../assets/img/angle-left-solid.svg" alt="left" />
-            --
-          </h2>
-        </div>
-      </div>
-    </div>
     <div class="container-fluid bg-blue py-3">
       <div class="container py-3">
         <div>
@@ -29,7 +16,7 @@
 </template>
 
 <script>
-import dcIcon from "../assets/img/dcIcondata";
+import dcIcon from "../assets/data/dcIcondata";
 export default {
   name: "MainComponent",
   data() {
@@ -41,10 +28,6 @@ export default {
 </script>
 
 <style scoped>
-h2 img {
-  width: 15px;
-}
-
 .bg-blue {
   background-color: hsl(209deg 98% 49%);
 }

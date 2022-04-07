@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header :links="headerMenu" />
+    <Content />
     <Main />
     <Footer :links="headerMenu" />
   </div>
@@ -10,13 +11,14 @@
 import Header from "./components/HeaderComponent.vue";
 import Main from "./components/MainComponent.vue";
 import Footer from "./components/FooterComponent.vue";
-
+import Content from "./components/ContentComponent.vue";
 export default {
   name: "App",
   components: {
     Header,
     Main,
     Footer,
+    Content,
   },
   data() {
     return {
@@ -53,10 +55,16 @@ li {
 .c-grey {
   color: grey;
 }
+.c-red {
+  color: red;
+}
 .c-white {
   color: white !important;
 }
 a {
   text-decoration: none !important;
+}
+a:hover {
+  color: grey !important;
 }
 </style>

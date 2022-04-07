@@ -1,8 +1,8 @@
-import digitalComics from "./buy-comics-digital-comics.png";
-import dcMerchandise from "./buy-comics-merchandise.png";
-import subscription from "./buy-comics-subscriptions.png";
-import comicsShopLocator from "./buy-comics-shop-locator.png";
-import dcPowerVisa from "./buy-dc-power-visa.svg";
+import digitalComics from "../img/buy-comics-digital-comics.png";
+import dcMerchandise from "../img/buy-comics-merchandise.png";
+import subscription from "../img/buy-comics-subscriptions.png";
+import comicsShopLocator from "../img/buy-comics-shop-locator.png";
+import dcPowerVisa from "../img/buy-dc-power-visa.svg";
 
 const dciconData = [
     {

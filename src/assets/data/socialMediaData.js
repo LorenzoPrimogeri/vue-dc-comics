@@ -1,8 +1,8 @@
-import facebook from "./footer-facebook.png";
-import twitter from "./footer-twitter.png";
-import youtube from "./footer-youtube.png";
-import pinterest from "./footer-pinterest.png";
-import periscope from "./footer-periscope.png";
+import facebook from "../img/footer-facebook.png";
+import twitter from "../img/footer-twitter.png";
+import youtube from "../img/footer-youtube.png";
+import pinterest from "../img/footer-pinterest.png";
+import periscope from "../img/footer-periscope.png";
 
 
 const socialMediaData = [

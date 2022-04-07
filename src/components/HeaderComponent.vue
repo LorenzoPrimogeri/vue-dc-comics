@@ -8,7 +8,9 @@
         </div>
         <div class="col-10 d-flex align-items-center justify-content-end">
           <ul>
-            <li v-for="element in links" :key="element">{{ element }}</li>
+            <li v-for="(element, index) in links" :key="index">
+              {{ element }}
+            </li>
           </ul>
         </div>
       </div>

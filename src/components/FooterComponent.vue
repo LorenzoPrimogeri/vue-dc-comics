@@ -8,13 +8,17 @@
               <li>
                 <h3>DC COMICS</h3>
                 <ul class="d-flex flex-column c-grey my-2 p-0">
-                  <li v-for="element in links" :key="element">{{ element }}</li>
+                  <li v-for="(element, index) in links" :key="index">
+                    {{ element }}
+                  </li>
                 </ul>
               </li>
               <li>
                 <h3>SHOP</h3>
                 <ul class="d-flex flex-column c-grey p-0">
-                  <li v-for="element in shop" :key="element">{{ element }}</li>
+                  <li v-for="(element, index) in shop" :key="index">
+                    {{ element }}
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -22,7 +26,9 @@
               <li class="p-0">
                 <h3>DC</h3>
                 <ul class="d-flex flex-column c-grey my-2 p-0">
-                  <li v-for="element in dc" :key="element">{{ element }}</li>
+                  <li v-for="(element, index) in dc" :key="index">
+                    {{ element }}
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -30,7 +36,7 @@
               <li class="p-0">
                 <h3>SITES</h3>
                 <ul class="d-flex flex-column c-grey my-2 p-0">
-                  <li v-for="element in sites" :key="element">{{ element }}</li>
+                  <li v-for="(element, index) in sites" :key="index">{{ element }}</li>
                 </ul>
               </li>
             </ul>
@@ -49,7 +55,7 @@
             <h3 class="c-blue">FOLLOW US</h3>
             <div>
               <ul>
-                <li v-for="element in socialMediaData" :key="element">
+                <li v-for="(element, index) in socialMediaData" :key="index">
                   <img :src="element.icon" :alt="element.name" />
                 </li>
               </ul>

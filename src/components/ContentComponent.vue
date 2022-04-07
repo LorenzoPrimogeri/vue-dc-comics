@@ -1,13 +1,14 @@
 <template>
   <div>
-    <div class="container-fluid jt-image"></div>
+    <div class="container-fluid jt-image">
+    </div>
     <div class="container-fluid bg-black">
       <div class="container p-0 position-relative">
         <p class="lp-btn bg-blue c-white position-absolute">CURRENT SERIES</p>
         <div class="row justify-content-between g-1 py-5">
           <div
-            v-for="element in dcComics"
-            :key="element"
+            v-for="(element, index) in dcComics"
+            :key="index"
             class="col d-flex flex-wrap"
           >
             <div>
@@ -55,7 +56,7 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.position-relative p {
+.position-relative p{
   top: -20px;
 }
 </style>

@@ -52,6 +52,9 @@ li {
   padding: 0px 10px;
   display: inline;
 }
+.bg-blue {
+  background-color: hsl(209deg 98% 49%);
+}
 .c-grey {
   color: grey;
 }

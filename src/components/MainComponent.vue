@@ -28,9 +28,6 @@ export default {
 </script>
 
 <style scoped>
-.bg-blue {
-  background-color: hsl(209deg 98% 49%);
-}
 li {
   color: white;
 }

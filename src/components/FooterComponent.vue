@@ -8,20 +8,13 @@
               <li>
                 <h3>DC COMICS</h3>
                 <ul class="d-flex flex-column c-grey my-2 p-0">
-                  <li>Characters</li>
-                  <li>Coimic</li>
-                  <li>Movies</li>
-                  <li>TV</li>
-                  <li>Games</li>
-                  <li>Videos</li>
-                  <li>News</li>
+                  <li v-for="element in links" :key="element">{{ element }}</li>
                 </ul>
               </li>
               <li>
                 <h3>SHOP</h3>
                 <ul class="d-flex flex-column c-grey p-0">
-                  <li>Shop DC</li>
-                  <li>Shop DC Collectibles</li>
+                  <li v-for="element in shop" :key="element">{{ element }}</li>
                 </ul>
               </li>
             </ul>
@@ -29,16 +22,7 @@
               <li class="p-0">
                 <h3>DC</h3>
                 <ul class="d-flex flex-column c-grey my-2 p-0">
-                  <li>Terms Of USe</li>
-                  <li>Privacy policy (New)</li>
-                  <li>Ad Choices</li>
-                  <li>Advertising</li>
-                  <li>Subscriptions</li>
-                  <li>Talent Workshops</li>
-                  <li>CPSC Certificates</li>
-                  <li>Ratings</li>
-                  <li>Shop Help</li>
-                  <li>Contact Us</li>
+                  <li v-for="element in dc" :key="element">{{ element }}</li>
                 </ul>
               </li>
             </ul>
@@ -46,11 +30,7 @@
               <li class="p-0">
                 <h3>SITES</h3>
                 <ul class="d-flex flex-column c-grey my-2 p-0">
-                  <li>DC</li>
-                  <li>MAD Magazine</li>
-                  <li>DC Kids</li>
-                  <li>DC Universe</li>
-                  <li>DC Power Visa</li>
+                  <li v-for="element in sites" :key="element">{{ element }}</li>
                 </ul>
               </li>
             </ul>
@@ -63,32 +43,14 @@
       <div class="container bg-grey">
         <div class="row justify-content-between py-5">
           <div class="col-3 py-2">
-            <a class="lp-btn c-white p-3" href="">SING Up NOW!</a>
+            <a class="lp-btn c-white p-3" href="">SIGN UP NOW!</a>
           </div>
           <div class="col-9 d-flex justify-content-end">
             <h3 class="c-blue">FOLLOW US</h3>
             <div>
               <ul>
-                <li>
-                  <img src="../assets/img/footer-facebook.png" alt="facebook" />
-                </li>
-                <li>
-                  <img
-                    src="../assets/img/footer-periscope.png"
-                    alt="periscope"
-                  />
-                </li>
-                <li>
-                  <img
-                    src="../assets/img/footer-pinterest.png"
-                    alt="pinterest"
-                  />
-                </li>
-                <li>
-                  <img src="../assets/img/footer-twitter.png" alt="twitter" />
-                </li>
-                <li>
-                  <img src="../assets/img/footer-youtube.png" alt="youtube" />
+                <li v-for="element in socialMediaData" :key="element">
+                  <img :src="element.icon" :alt="element.name" />
                 </li>
               </ul>
             </div>
@@ -101,8 +63,29 @@
 </template>
 
 <script>
+import socialMediaData from "../assets/img/socialMediaData";
 export default {
   name: "FooterComponent",
+  props: ["links".toLowerCase()],
+  data() {
+    return {
+      shop: ["Shop DC", "Shop DC Collectibles"],
+      dc: [
+        "Terms Of USe",
+        "Privacy policy (New)",
+        "Ad Choices",
+        "Advertising",
+        "Subscriptions",
+        "Talent Workshops",
+        "CPSC Certificates",
+        "Ratings",
+        "Shop Help",
+        "Contact Us",
+      ],
+      sites: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
+      socialMediaData,
+    };
+  },
 };
 </script>
 

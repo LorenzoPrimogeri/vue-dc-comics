@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header />
+    <Header :links="headerMenu" />
     <Main />
-    <Footer />
+    <Footer :links="headerMenu" />
   </div>
 </template>
 
@@ -17,6 +17,22 @@ export default {
     Header,
     Main,
     Footer,
+  },
+  data() {
+    return {
+      headerMenu: [
+        "CHARACTERS",
+        "COMICS",
+        "MOVIES",
+        "TV",
+        "GAMES",
+        "COLECTIBLES",
+        "VIDEOS",
+        "FANS",
+        "NEWS",
+        "SHOP",
+      ],
+    };
   },
 };
 </script>

@@ -8,17 +8,7 @@
         </div>
         <div class="col-10 d-flex align-items-center justify-content-end">
           <ul>
-            <li v-for="element in headerMenu" :key="element">{{ element }}</li>
-            <!-- <li>CHARACTERS</li>
-            <li>COMICS</li>
-            <li>MOVIES</li>
-            <li>TV</li>
-            <li>GAMES</li>
-            <li>COLECTIBLES</li>
-            <li>VIDEOS</li>
-            <li>FANS</li>
-            <li>NEWS</li>
-            <li>SHOP</li> -->
+            <li v-for="element in links" :key="element">{{ element }}</li>
           </ul>
         </div>
       </div>
@@ -29,22 +19,7 @@
 <script>
 export default {
   name: "HeaderComponent",
-  data() {
-    return {
-      headerMenu: [
-        "CHARACTERS",
-        "COMICS",
-        "MOVIES",
-        "TV",
-        "GAMES",
-        "COLECTIBLES",
-        "VIDEOS",
-        "FANS",
-        "NEWS",
-        "SHOP",
-      ],
-    };
-  },
+  props: ["links"],
 };
 </script>
 

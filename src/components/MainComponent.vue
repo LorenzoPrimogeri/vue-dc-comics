@@ -16,46 +16,10 @@
     <div class="container-fluid bg-blue py-3">
       <div class="container py-3">
         <div>
-          <ul>
-            <li>
-              <img
-                class="sizeImg"
-                src="../assets/img/buy-comics-digital-comics.png"
-                alt="buy-comics-digital-comics.png"
-              />
-              DIGITAL COMICS
-            </li>
-            <li>
-              <img
-                class="sizeImg"
-                src="../assets/img/buy-comics-merchandise.png"
-                alt="buy-comics-merchandise.png"
-              />
-              DC MERCHANDISE
-            </li>
-            <li>
-              <img
-                class="sizeImg"
-                src="../assets/img/buy-comics-subscriptions.png"
-                alt="buy-comics-shop-locator.png"
-              />
-              SUBSCRIPTION
-            </li>
-            <li>
-              <img
-                class="sizeImg"
-                src="../assets/img/buy-comics-shop-locator.png"
-                alt="buy-comics-subscriptions.png"
-              />
-              COMIC SHOP LOCATOR
-            </li>
-            <li>
-              <img
-                class="sizeImg"
-                src="../assets/img/buy-dc-power-visa.svg"
-                alt="buy-dc-power-visa.svg"
-              />
-              DC POWER VISA
+          <ul class="d-flex justify-content-between align-items-center">
+            <li v-for="element in dcIcon" :key="element">
+              <img class="sizeImg" :src="element.icon" :alt="element.name" />
+              {{ element.name }}
             </li>
           </ul>
         </div>
@@ -65,8 +29,14 @@
 </template>
 
 <script>
+import dcIcon from "../assets/img/dcIcondata";
 export default {
   name: "MainComponent",
+  data() {
+    return {
+      dcIcon,
+    };
+  },
 };
 </script>
 
@@ -83,6 +53,6 @@ li {
 }
 .sizeImg {
   padding-right: 5px;
-  width: 40px;
+  width: 60px;
 }
 </style>
